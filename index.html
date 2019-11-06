@@ -2,8 +2,9 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
 <script>
- function play(id){
-      var aVideoAsset = document.querySelector('#' + id);
+	
+ function play(){
+      var aVideoAsset = document.querySelector('#' + 'vid');
       aVideoAsset.play().catch(function (error) {
         aVideoAsset.pause();
         drawText("Press play button");
