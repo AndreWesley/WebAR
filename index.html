@@ -22,7 +22,7 @@
 	<a-scene arjs="debugUIEnabled: false;" vr-mode-ui="enabled: false">
 		<a-assets>
 			<a-asset-item id="icosahedronAsset" src="models/Icosahedron.gltf"></a-asset-item>
-			<video id="dancer" autoplay="true" loop="true" src="video/dancer1.webm"></video>
+			<video id="dancer" autoplay loop="true" src="video/dancer1.webm"></video>
 		</a-assets>
 
 		<!-- the a-marker uses instead a-marker-camera was for "emitevents" to update
@@ -31,7 +31,7 @@
 			<!-- <a-video src="#dancer" width="8" height="4.5" position="0 0 0" rotation="90 0 0"
 				material="alphaTest: '0.5' transparent='false'"></a-video> -->
 
-			<a-entity geometry="primitive: plane" material="src: #dancer" rotation="-90 0 0"></a-entity>
+			<a-entity geometry="primitive: box" material="src:#dancer" rotation="-90 0 0"></a-entity>
 
 			<!-- the parenthood was used to rotate to put the child in a specific position
 			what, together with the animation causes a "slope spin effect" -->
