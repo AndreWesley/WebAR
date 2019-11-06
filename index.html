@@ -2,6 +2,25 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
 <script>
+ function play(id){
+      var aVideoAsset = document.querySelector('#' + id);
+      aVideoAsset.play().catch(function (error) {
+        aVideoAsset.pause();
+        drawText("Press play button");
+        hideOrShow("playButton");
+      });
+      aVideoAsset.setAttribute('loop', 'false');
+      hideOrShow('playButton');
+    }
+    function hideOrShow(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 	// update the 3D model visibility with marker found/lost events
 	AFRAME.registerComponent("markerHandler", {
 		init: function () {
